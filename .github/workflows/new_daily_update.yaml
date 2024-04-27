@@ -32,8 +32,8 @@ jobs:
       - name: "Commit and push changes"
         if: ${{ startsWith(steps.check-changes.outputs.HAS_CHANGES, 'true') }}
         run: |
-          git add .
-          git commit -m "Mirror latest Keyguard artifact from GitHub Releases"
           git config user.email github-actions@github.com
           git config user.name "${{ github.actor }}"
+          git add .
+          git commit -m "Mirror latest Keyguard artifact from GitHub Releases"
           git push origin master
