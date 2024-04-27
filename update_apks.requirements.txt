@@ -1,0 +1,3 @@
+fdroidserver
+beautifulsoup4
+requests

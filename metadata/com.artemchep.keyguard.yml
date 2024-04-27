@@ -1,0 +1,24 @@
+AuthorName: 'Artem Chepurnyi'
+AuthorEmail: 'mail@artemchep.com'
+Categories:
+- keyguard-repo-fdroid
+CurrentVersionCode: 2147483647
+IssueTracker: 'https://github.com/AChep/keyguard-app/issues'
+Name: Keyguard
+SourceCode: 'https://github.com/AChep/keyguard-app'
+Translation: 'https://crowdin.com/project/keyguard'
+Summary: 'An alternative client for the Bitwarden® platform'
+Description: |-
+    <p><i>Can be used with any Bitwarden® installation. This product is not associated with the Bitwarden project nor Bitwarden, Inc. Bitwarden® is a registered trademark of Bitwarden Inc.</i></p>
+    <p><b>Highlights</b></p>
+    - a beautiful rich and responsive <b>Material You</b> user interface;
+    - a <b>powerful</b> and <b>fast search</b>;
+    - a support for creating & using <b>passkeys</b> - a modern alternative to passwords.
+    - a watchtower that finds items with <b>Pwned passwords</b>, <b>Vulnerable accounts</b>, <b>Reused passwords</b>, <b>Inactive two factor authentication</b>, <b>Inactive passkeys</b>, <b>Unsecure Websites</b> as well as <b>Duplicate</b>, <b>Incomplete</b> and <b>Expiring</b> items, and other;
+    - <b>multi-account support</b> with secure login and two-factor authentication support;
+    - add items and sends, modify, and view your vault offline.
+    - beautiful <b>Light/Dark theme</b>;
+    - a generator with <b>Email forwarders</b>, <b>Custom wordlists</b> support and many other features;
+    - a support for <b>placeholders</b> and <b>URL overrides</b>;
+    - and much more!
+WebSite: ''
