@@ -16,6 +16,10 @@ jobs:
           fetch-depth: 0
           lfs: true
           token: ${{ secrets.PERSONAL_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
       - name: "Prepare env"
         run: |
           echo ${{ secrets.KEYSTORE_B64 }} | base64 -d | zcat >> keystore.p12
