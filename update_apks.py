@@ -2,6 +2,7 @@ import requests
 import re
 import os
 import sys
+import subprocess
 
 from bs4 import BeautifulSoup
 
@@ -9,15 +10,17 @@ HOST = "https://github.com"
 REPO = "AChep/keyguard-app"
 RELEASE_URL = f"{HOST}/{REPO}/releases/latest"
 
+
 def get_latest_release_tag():
     response = requests.get(RELEASE_URL)
     return re.match(r".*tag/([\w]+).*", response.url).group(1)
 
+
 tag = get_latest_release_tag()
-apk_filename = f"repo/Keyguard-{tag}.apk" 
+apk_filename = f"repo/Keyguard-{tag}.apk"
 
 # If the file already exists, then there is no
-# need to download the file. We assume that the 
+# need to download the file. We assume that the
 # files are immutable.
 if os.path.exists(apk_filename):
     sys.exit(0)
@@ -36,9 +39,9 @@ assets_soup = BeautifulSoup(
 assets_urls = [el['href'] for el in assets_soup.select('a[href]')]
 assets_apk_url = next(
     filter(
-        lambda url: url.endswith('/androidApp-none-release.apk'), 
+        lambda url: url.endswith('/androidApp-none-release.apk'),
         assets_urls
-    ), 
+    ),
     None
 )
 if not assets_apk_url:
@@ -53,4 +56,4 @@ with open(apk_filename, mode="wb") as file:
 # Update repository
 #
 
-os.system("fdroid update")  
+subprocess.run(["fdroid", "update"], check=True)
