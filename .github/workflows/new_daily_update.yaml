@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
+      - name: "Download dependencies"
+        run: |
+          pip install -r requirements.txt
       - name: "Prepare env"
         run: |
           echo ${{ secrets.KEYSTORE_B64 }} | base64 -d | zcat >> keystore.p12
