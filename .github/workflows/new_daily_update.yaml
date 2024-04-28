@@ -26,7 +26,6 @@ jobs:
           echo ${{ secrets.CONFIG_B64 }} | base64 -d | zcat >> config.yml
       - name: "Update repo"
         run: |
-          pip install -r update_apks.requirements.txt
           python update_apks.py
       - name: "Check if any changes"
         id: check-changes
