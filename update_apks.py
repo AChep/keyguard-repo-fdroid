@@ -18,7 +18,7 @@ def get_latest_release_tag():
 
 tag = get_latest_release_tag()
 tag_filename = tag.replace(".", "-")
-apk_filename = f"repo/Keyguard-{tag}.apk"
+apk_filename = f"repo/Keyguard-{tag_filename}.apk"
 
 # If the file already exists, then there is no
 # need to download the file. We assume that the
