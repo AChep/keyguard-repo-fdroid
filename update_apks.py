@@ -13,10 +13,11 @@ RELEASE_URL = f"{HOST}/{REPO}/releases/latest"
 
 def get_latest_release_tag():
     response = requests.get(RELEASE_URL)
-    return re.match(r".*tag/([\w]+).*", response.url).group(1)
+    return re.match(r".*tag/([\w\.]+).*", response.url).group(1)
 
 
 tag = get_latest_release_tag()
+tag_filename = tag.replace(".", "-")
 apk_filename = f"repo/Keyguard-{tag}.apk"
 
 # If the file already exists, then there is no
