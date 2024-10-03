@@ -13,3 +13,4 @@ Keyguard-r20240731.apk com.artemchep.keyguard 2024-08-01
 Keyguard-r20240811.apk com.artemchep.keyguard 2024-08-12
 Keyguard-r20240814.apk com.artemchep.keyguard 2024-08-15
 Keyguard-r20240906.apk com.artemchep.keyguard 2024-09-09
+Keyguard-r20241002.apk com.artemchep.keyguard 2024-10-03
