@@ -10,6 +10,8 @@ HOST = "https://github.com"
 REPO = "AChep/keyguard-app"
 RELEASE_URL = f"{HOST}/{REPO}/releases/latest"
 
+MAX_ARTIFACTS_COUNT = 5
+
 
 def get_latest_release_tag():
     response = requests.get(RELEASE_URL)
@@ -25,6 +27,20 @@ apk_filename = f"repo/Keyguard-{tag_filename}.apk"
 # files are immutable.
 if os.path.exists(apk_filename):
     sys.exit(0)
+    
+#
+# Delete old builds
+#
+
+existing_apks = []
+with os.scandir("repo/") as d:
+    for entry in d:
+        if entry.name.endswith(".apk") and entry.is_file():
+            existing_apks.append(entry.path)
+existing_apks.sort()
+existing_apks_to_delete = existing_apks[:1 - MAX_ARTIFACTS_COUNT]
+for apk in existing_apks_to_delete:
+    os.remove(apk)
 
 #
 # Download the latest .apk from GitHub
@@ -57,4 +73,4 @@ with open(apk_filename, mode="wb") as file:
 # Update repository
 #
 
-subprocess.run(["fdroid", "update"], check=True)
+#subprocess.run(["fdroid", "update"], check=True)
