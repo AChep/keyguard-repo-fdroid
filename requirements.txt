@@ -1,4 +1,0 @@
-androguard == 3.3.5
-fdroidserver
-beautifulsoup4
-requests
