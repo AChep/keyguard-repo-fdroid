@@ -16,4 +16,5 @@ Keyguard-r20240906.apk com.artemchep.keyguard 2024-09-09
 Keyguard-r20241002.apk com.artemchep.keyguard 2024-10-03
 Keyguard-r20241004.apk com.artemchep.keyguard 2024-10-14
 Keyguard-r20241007.apk com.artemchep.keyguard 2024-10-14
+Keyguard-r20241017.apk com.artemchep.keyguard 2024-10-17
 categories.txt a55c52a7d6e38d2eea53c022bfbce38bc4c92dc4f1ce783c03b2c25f60d004c1 2024-10-14
